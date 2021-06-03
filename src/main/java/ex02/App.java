@@ -24,6 +24,33 @@ public class App {
     static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        App myApp = new App();
+
+        // Input
+        String myString = myApp.readString();
+
+        // Determine string length
+        int myStringLength = myApp.numChars(myString);
+
+        String outputString = myApp.generateOutputString(myString, myStringLength);
+
+        myApp.printOutput(outputString);
     }
 
+    public String readString() {
+        System.out.print("What is the input string? ");
+        return in.nextLine();
+    }
+
+    public int numChars(String myString) {
+        return myString.length();
+    }
+
+    public String generateOutputString(String myString, int stringLength) {
+        return String.format("%s has %d characters.", myString, stringLength);
+    }
+
+    public void printOutput(String outputString) {
+        System.out.println(outputString);
+    }
 }
