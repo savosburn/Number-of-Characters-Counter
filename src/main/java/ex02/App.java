@@ -13,11 +13,14 @@ public class App {
     public static void main(String[] args) {
         App myApp = new App();
 
+        // Input
         String myString = myApp.readString();
+
+        // Calculations
         int myStringLength = myApp.numChars(myString);
 
+        // Output
         String outputString = myApp.generateOutputString(myString, myStringLength);
-
         myApp.printOutput(outputString);
     }
 
@@ -27,6 +30,7 @@ public class App {
     }
 
     public int numChars(String myString) {
+
         return myString.length();
     }
 
